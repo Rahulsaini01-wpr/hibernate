@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="entity.Student" table="STUDENT">
+      
+      <!-- Primary Key Mapping -->
+      <id name="roll" type="int" column="ROLL">
+         <generator class="increment"/>
+      </id>
+
+      <!-- Student  Name -->
+      <property name="name" column="NAME" type="string" length="50" not-null="true"/>
+      
+      <!-- Student Age -->
+      <property name="age" column="AGE" type="int" length="50" not-null="true"/>
+      
+      <!-- Student Gender -->
+      <property name="gender" column="GENDER" type="string" not-null="true"/>
+      
+      <!-- Student Address -->
+      <property name="address" column="ADDRESS" type="string" not-null="true"/>
+      
+   </class>
+</hibernate-mapping>
